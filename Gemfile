@@ -26,6 +26,13 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Gemfile
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+
+# If you want Bootstrap support on form_for
+gem 'bootstrap_form'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
