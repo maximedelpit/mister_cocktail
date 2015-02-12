@@ -1,0 +1,21 @@
+<% content_for(:title) do %>
+  <%= @cocktail.name %> is on Mister Cocktail
+<% end %>
+
+<div class="col-xs-10 col-xs-offset-1">
+  <div class="card">
+    <h1><%= @cocktail.name.capitalize %></h1>
+    <ul class="unstyled-list">
+      <% @cocktail.doses.each do | dose | %>
+        <li><strong><%= dose.ingredient.name %></strong> : <%= dose.description %></li
+      <% end %>
+    </ul>
+  </div>
+
+
+<div class="text-center col-xs-12">
+<%= link_to "cocktails", cocktails_path, {class:"btn btn-danger"} %>
+</div>
+<div class="text-center col-xs-12">
+<%= link_to "Add dose", new_cocktail_dose_path(@cocktail), {class:"btn btn-danger"} %>
+</div>

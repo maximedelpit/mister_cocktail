@@ -1,0 +1,22 @@
+<% content_for(:title) do %>
+  Mister Cocktail - new cocktail
+<% end %>
+
+<h1>Add your cocktail</h1>
+
+<p>Please fill the following fields</p>
+
+<%= bootstrap_form_for(@cocktail) do | f | %>
+  <% if @cocktail.errors.any? %>
+    <div class="error_explanation">
+      <ul>
+        <% @cocktail.errors.full_messages.each do | message | %>
+          <li><%= message %></li>
+          <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    Name:  <%= f.text_field :name %><br>
+    <%= f.submit %>
+<% end %>
