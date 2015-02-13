@@ -6,7 +6,7 @@
   <div class="col-sm-6 col-md-4 text-center">
     <%= link_to(cocktail) do %>
       <div class="card">
-        <%= image_tag "http://placehold.it/200x100" %>
+        <%= image_tag cocktail.picture.url(:thumb) %>
         <h4><%= cocktail.name %></h4>
       </div>
     <% end %>

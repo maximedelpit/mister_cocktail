@@ -36,6 +36,11 @@ gem 'bootstrap_form'
 # Security
 gem 'figaro'
 
+
+# Gestion des images
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

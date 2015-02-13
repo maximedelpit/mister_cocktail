@@ -6,7 +6,7 @@
 
 <p>Please fill the following fields</p>
 
-<%= bootstrap_form_for(@cocktail) do | f | %>
+<%= bootstrap_form_for(@cocktail, html: { multipart: true}) do | f | %>
   <% if @cocktail.errors.any? %>
     <div class="error_explanation">
       <ul>
@@ -17,6 +17,7 @@
     </div>
   <% end %>
 
-    Name:  <%= f.text_field :name %><br>
+    <%= f.text_field :name %><br>
+    <%= f.file_field :picture %><br>
     <%= f.submit %>
 <% end %>
