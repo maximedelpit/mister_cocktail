@@ -1,9 +1,13 @@
-<h1>Our cocktails</h1>
+<% content_for(:nav_title) do %>
+  Our cocktails
+<% end %>
+
+
 
 <row>
 <% @cocktails.each do | cocktail | %>
   <!-- how to bundle a link_to to  -->
-  <div class="col-sm-6 col-md-4 text-center">
+  <div class="col-sm-6 col-md-3 text-center">
     <%= link_to(cocktail) do %>
       <div class="card">
         <%= image_tag cocktail.picture.url(:thumb) %>
@@ -15,5 +19,5 @@
 
 
 <div class="text-center col-xs-12">
-<%= link_to "Add cocktail", new_cocktail_path, {class:"btn btn-danger"} %>
+<%= link_to "Add cocktail", new_cocktail_path, {class:"btn-custom"} %>
 </div>

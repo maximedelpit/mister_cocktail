@@ -2,6 +2,10 @@
   <%= @cocktail.name %> is on Mister Cocktail
 <% end %>
 
+<% content_for(:nav_title) do %>
+ <% @cocktail.name %>
+<% end %>
+
 <div class="col-xs-10 col-xs-offset-1">
   <div class="card">
     <%= image_tag @cocktail.picture.url(:medium) %>

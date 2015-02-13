@@ -1,3 +1,23 @@
 /* -------------------------------------
  * You killer button SASS module
  * ------------------------------------- */
+
+  $btn-custom-height: 40px;
+  $btn-custom-bg: $blue;
+  $btn-custom-color: white;
+  $btn-custom-horizontal-padding: 10px;
+  $btn-custom-radius: 2px;
+
+ .btn-custom {
+    line-height: $btn-custom-height;
+    padding: $btn-custom-horizontal-padding;
+    color: $btn-custom-color;
+    border-radius: $btn-custom-radius;
+    font-weight: bold;
+    background-color: $btn-custom-bg;
+    font-size: 12px;
+    &:hover{
+      background-color: darken($btn-custom-bg, 10%);
+      color: white
+    }
+  }
