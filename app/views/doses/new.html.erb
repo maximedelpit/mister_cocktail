@@ -12,16 +12,17 @@
 <%= bootstrap_form_for([@cocktail, @dose]) do | f | %>
   <% if @dose.errors.any? %>
     <div class="error_explanation">
-      <ul>
+      <ul class="list-unstyled">
         <% @dose.errors.full_messages.each do | message | %>
           <li><%= message %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  Description:  <%= f.text_field :description %><br>
-  Ingredient: <%= f.select(:ingredient_id, ingredients.map { | ingredient | [ingredient.name, ingredient.id] }, include_blank: true) %><br>
-  <%= f.submit %>
+  <div class="col-xs-4 col-xs-offset-2"><%= f.text_field :description %></div>
+  <div class="col-xs-2 col-xs-offset-1">
+    <%= f.select(:ingredient_id, ingredients.map { | ingredient | [ingredient.name, ingredient.id] }, include_blank: true) %></div>
+  <div class="col-xs-2 col-xs-offset-1"><%= f.submit %></div>
  <% end %>
 
 

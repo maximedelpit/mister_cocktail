@@ -33,6 +33,9 @@ gem 'font-awesome-sass'
 # If you want Bootstrap support on form_for
 gem 'bootstrap_form'
 
+# Security
+gem 'figaro'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
